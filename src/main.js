@@ -4,6 +4,17 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
+
+import BootstrapVue from 'bootstrap-vue';
+
+import '@fullcalendar/core/main.css';
+import '@fullcalendar/daygrid/main.css';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+Vue.use(BootstrapVue);
+
 Vue.config.productionTip = false;
 
 new Vue({
