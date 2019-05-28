@@ -1,6 +1,6 @@
 [
     {
-    "data": "20/05/2019",
+    "data": "28/05/2019",
     "titulo": "Defesa do Evento",
     "descricao": "<b>Descrição de evento.</b>",
     "horarioInicio": "13:00",
@@ -12,7 +12,19 @@
     "tipoDoEvento": "DEFESA"
     },
     {
-    "data": "21/05/2019",
+        "data": "28/05/2019",
+        "titulo": "Defesa do Evento 2",
+        "descricao": "<b>Descrição de evento.</b>",
+        "horarioInicio": "13:00",
+        "horarioFim": "14:00",
+        "local": "Sala 5",
+        "link": "http://biblioteca.fmvz.usp.br/index.php/2018/08/07/treinamentos-de-normalizacao-e-mendeley-na-biblioteca/",
+        "imagem": "http://biblioteca.fmvz.usp.br/wp-content/uploads/2018/08/TREINAMENTOS_2018_site.png",
+        "autor": "Patricia Naomi",
+        "tipoDoEvento": "DEFESA"
+        },
+    {
+    "data": "25/05/2019",
     "titulo": "Treinamento 1",
     "descricao": "<b>Descrição de evento.</b>",
     "horarioInicio": "13:00",
@@ -24,7 +36,7 @@
     "tipoDoEvento": "TREINAMENTO"
     },
     {
-    "data": "22/05/2019",
+    "data": "24/05/2019",
     "titulo": "Treinamento 2",
     "descricao": "<b>Descrição de evento.</b>",
     "horarioInicio": "15:30",
@@ -34,5 +46,17 @@
     "imagem": "http://biblioteca.fmvz.usp.br/wp-content/uploads/2018/08/TREINAMENTOS_2018_site.png",
     "autor": "Patricia Naomi",
     "tipoDoEvento": "TREINAMENTO"
-    }
+    },
+    {
+        "data": "24/05/2019",
+        "titulo": "Treinamento 2",
+        "descricao": "<b>Descrição de evento.</b>",
+        "horarioInicio": "15:30",
+        "horarioFim": "16:00",
+        "local": "Sala 5",
+        "link": "http://biblioteca.fmvz.usp.br/index.php/2018/08/07/treinamentos-de-normalizacao-e-mendeley-na-biblioteca/",
+        "imagem": "http://biblioteca.fmvz.usp.br/wp-content/uploads/2018/08/TREINAMENTOS_2018_site.png",
+        "autor": "Patricia Naomi",
+        "tipoDoEvento": "TREINAMENTO"
+        }
     ]

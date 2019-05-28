@@ -27,7 +27,7 @@ export default {
       events: this.events,
       select: selectInfo => console.log(selectInfo),
       eventClick: (info) => {
-        console.log(info);
+        this.$store.commit('changeSelectedDate', info.event.start.getTime());
       },
 
       header: {

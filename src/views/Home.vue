@@ -5,7 +5,7 @@
         <EventsCalendar :events="events"/>
       </b-col>
       <b-col cols="6">
-        <EventCard :event="events[0]"></EventCard>
+        <EventCard :event="event" :key="event.data" v-for="event in selectedEvents"></EventCard>
       </b-col>
     </b-row>
   </div>
@@ -15,10 +15,6 @@
 import EventsCalendar from '@/components/EventsCalendar.vue';
 import EventCard from '@/components/EventCard.vue';
 
-import { transform } from '../core/providers/event-transform';
-import eventos from '../__mocks__/eventos.json';
-
-
 export default {
   name: 'home',
   components: {
@@ -27,11 +23,18 @@ export default {
   },
   data() {
     return {
-      events: transform(eventos),
     };
   },
   mounted() {
     console.log(this.events);
   },
+  computed: {
+    events() {
+      return this.$store.state.events;
+    },
+    selectedEvents(){
+      return this.$store.getters.selectedEvents;
+    }
+  }
 };
 </script>

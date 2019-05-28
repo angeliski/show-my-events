@@ -1,6 +1,7 @@
 <template>
   <b-card
     :header="event.title"
+    header-tag="h1"
     :footer="`Autor: ${event.autor}`"
     :sub-title="event.tipoDoEvento"
     :img-src="event.imagem"
