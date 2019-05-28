@@ -1,11 +1,10 @@
 import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue';
+
 import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
-
-
-import BootstrapVue from 'bootstrap-vue';
 
 import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';

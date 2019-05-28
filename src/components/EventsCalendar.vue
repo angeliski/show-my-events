@@ -5,11 +5,12 @@
 <script>
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import bootstrapPlugin from '@fullcalendar/bootstrap';
 import interactionPlugin from '@fullcalendar/interaction';
 import ptBrLocale from '@fullcalendar/core/locales/pt-br';
 
 export default {
-  name: 'HelloWorld',
+  name: 'EventsCalendar',
   props: {
     events: {
       default() {
@@ -19,14 +20,21 @@ export default {
   },
   mounted() {
     const calendar = new Calendar(this.$refs.events, {
-      plugins: [interactionPlugin, dayGridPlugin],
+      plugins: [interactionPlugin, dayGridPlugin, bootstrapPlugin],
+      themeSystem: 'bootstrap',
       locale: ptBrLocale,
       selectable: true,
       events: this.events,
-      select: (selectInfo) => console.log(selectInfo),
-       eventClick: (info) => {
-        info.el.style.borderColor = 'red';
-      }
+      select: selectInfo => console.log(selectInfo),
+      eventClick: (info) => {
+        console.log(info);
+      },
+
+      header: {
+        left: 'today',
+        center: 'title',
+        right: 'prev,next',
+      },
     });
 
     calendar.render();
@@ -36,7 +44,6 @@ export default {
 
 <style lang="scss">
 .events {
-  max-width: 800px;
   .fc-event-container {
     cursor: pointer;
   }
