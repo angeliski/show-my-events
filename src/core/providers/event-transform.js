@@ -7,6 +7,7 @@ const formatDateTime = (date, time) => moment(`${date} ${time}`, 'DD/MM/YYYY HH:
 const toEvent = ({
   data, titulo, horarioInicio, ...others
 }) => ({
+  id: titulo.toLowerCase().replace(/\s/g, '-'),
   textColor: 'white',
   title: titulo,
   start: horarioInicio ? formatDateTime(data, horarioInicio) : formatDate(data),

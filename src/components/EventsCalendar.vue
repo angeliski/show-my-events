@@ -25,11 +25,8 @@ export default {
       locale: ptBrLocale,
       selectable: true,
       events: this.events,
-      select: selectInfo => console.log(selectInfo),
-      eventClick: (info) => {
-        this.$store.commit('changeSelectedDate', info.event.start.getTime());
-      },
-
+      select: selectInfo => this.changeSelectedDate(selectInfo.start.getTime()),
+      eventClick: (info) => this.changeSelectedDate(info.event.start.getTime()),
       header: {
         left: 'today',
         center: 'title',
@@ -39,6 +36,11 @@ export default {
 
     calendar.render();
   },
+  methods: {
+    changeSelectedDate(time){
+      this.$store.commit('changeSelectedDate', time);
+    }
+  }
 };
 </script>
 

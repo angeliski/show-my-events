@@ -5,7 +5,16 @@
         <EventsCalendar :events="events"/>
       </b-col>
       <b-col cols="6">
-        <EventCard :event="event" :key="event.data" v-for="event in selectedEvents"></EventCard>
+        <div class="alert alert-warning mt-6" v-if="selectedEvents.length == 0">
+          Nenhum evento foi encontrado.
+        </div>
+        <transition-group name="card"
+            enter-active-class="rotateInDownLeft"
+            leave-active-class="rotateOutDownRight"
+            mode="in-out"
+            tag="div">
+          <EventCard :event="event" :key="event.data" v-for="event in selectedEvents"></EventCard>
+        </transition-group>
       </b-col>
     </b-row>
   </div>
