@@ -34,15 +34,16 @@ export default {
     };
   },
   mounted() {
+    this.$store.dispatch('LOAD_EVENTS');
     console.log(this.events);
   },
   computed: {
     events() {
       return this.$store.state.events;
     },
-    selectedEvents(){
+    selectedEvents() {
       return this.$store.getters.selectedEvents;
-    }
-  }
+    },
+  },
 };
 </script>
