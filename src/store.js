@@ -10,17 +10,17 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     events: transform(eventos),
-    selectDate: moment().format('DD/MM/YYYY')
+    selectDate: moment().format('DD/MM/YYYY'),
   },
   mutations: {
-    changeSelectedDate(state, timeDate){
+    changeSelectedDate(state, timeDate) {
       state.selectDate = moment(timeDate).format('DD/MM/YYYY');
-    }
+    },
   },
   actions: {
 
   },
   getters: {
-    selectedEvents: state => state.events.filter(event => state.selectDate === event.data)
-  }
+    selectedEvents: state => state.events.filter(event => state.selectDate === event.data),
+  },
 });

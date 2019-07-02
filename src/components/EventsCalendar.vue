@@ -26,7 +26,7 @@ export default {
       selectable: true,
       events: this.events,
       select: selectInfo => this.changeSelectedDate(selectInfo.start.getTime()),
-      eventClick: (info) => this.changeSelectedDate(info.event.start.getTime()),
+      eventClick: info => this.changeSelectedDate(info.event.start.getTime()),
       header: {
         left: 'today',
         center: 'title',
@@ -37,10 +37,10 @@ export default {
     calendar.render();
   },
   methods: {
-    changeSelectedDate(time){
+    changeSelectedDate(time) {
       this.$store.commit('changeSelectedDate', time);
-    }
-  }
+    },
+  },
 };
 </script>
 

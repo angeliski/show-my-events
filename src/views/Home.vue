@@ -9,8 +9,7 @@
           Nenhum evento foi encontrado.
         </div>
         <transition-group name="card"
-            enter-active-class="rotateInDownLeft"
-            leave-active-class="rotateOutDownRight"
+            enter-active-class="rotateInDownRight"
             mode="in-out"
             tag="div">
           <EventCard :event="event" :key="event.data" v-for="event in selectedEvents"></EventCard>
