@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "@fullcalendar/bootstrap": "^4.1.0",
     "@fullcalendar/core": "^4.1.0",
     "@fullcalendar/daygrid": "^4.1.0",

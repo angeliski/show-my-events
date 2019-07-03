@@ -6,6 +6,8 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
+import '@fortawesome/fontawesome-free/css/all.css';
+
 import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
 

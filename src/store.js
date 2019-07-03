@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import moment from 'moment';
 
 import { transform } from './core/providers/event-transform';
-import eventos from './__mocks__/eventos.json';
 import { getEvents } from './api';
 
 Vue.use(Vuex);
@@ -18,10 +17,10 @@ export default new Vuex.Store({
       // eslint-disable-next-line no-param-reassign
       state.selectDate = moment(timeDate).format('DD/MM/YYYY');
     },
-    loadedEvents(state, events){
-      console.log(events)
+    loadedEvents(state, events) {
+      // eslint-disable-next-line no-param-reassign
       state.events = events;
-    }
+    },
   },
   actions: {
     loadEvents({ commit }) {

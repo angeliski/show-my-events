@@ -18,11 +18,11 @@ const formatDateTime = (date, time) => moment(`${date} ${time}`, 'DD/MM/YYYY HH:
 
 
 const toEvent = (eventArray) => {
-  const id=  eventArray[0];
+  const id = eventArray[0];
   const data = eventArray[1];
   const title = eventArray[2];
   const descricao = eventArray[3];
-  const textColor =  'white';
+  const textColor = 'white';
   const horarioInicio = eventArray[4];
   const horarioFim = eventArray[5];
   const local = eventArray[6];
@@ -45,10 +45,10 @@ const toEvent = (eventArray) => {
     local,
     link,
     imagem,
-    autor, 
-    tipoEvento
-  }
-}
+    autor,
+    tipoEvento,
+  };
+};
 
 
 export const transform = events => events.slice(1).map(toEvent);
