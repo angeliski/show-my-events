@@ -6,7 +6,7 @@
       </b-col>
       <b-col cols="6">
         <div class="alert alert-warning mt-6" v-if="selectedEvents.length == 0">
-          Nenhum evento foi encontrado.
+          Nenhum evento foi disponível nessa data.
         </div>
         <transition-group name="card"
             enter-active-class="rotateInDownRight"
