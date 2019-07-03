@@ -10,7 +10,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    events: transform(eventos),
+    events: [],
     selectDate: moment().format('DD/MM/YYYY'),
   },
   mutations: {
@@ -18,11 +18,17 @@ export default new Vuex.Store({
       // eslint-disable-next-line no-param-reassign
       state.selectDate = moment(timeDate).format('DD/MM/YYYY');
     },
+    loadedEvents(state, events){
+      console.log(events)
+      state.events = events;
+    }
   },
   actions: {
-    LOAD_EVENTS() {
+    loadEvents({ commit }) {
       return getEvents()
-        .then(console.log);
+        .then(({ data }) => {
+          commit('loadedEvents', transform(data.values));
+        });
     },
   },
   getters: {

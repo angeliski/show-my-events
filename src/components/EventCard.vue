@@ -14,7 +14,7 @@
     <b-card-text>Horário: {{event.horarioInicio}} – {{event.horarioFim}}</b-card-text>
     <b-card-text>Localização: {{event.local}}</b-card-text>
     <b-card-text><span v-html="event.descricao"></span></b-card-text>
-    <a :href="event.link" target="_blank" class="card-link">Site do Evento</a>
+    <a :href="event.link" target="_blank" class="card-link">Acesse Aqui</a>
   </b-card>
 </template>
 

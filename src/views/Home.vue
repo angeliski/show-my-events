@@ -34,8 +34,7 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch('LOAD_EVENTS');
-    console.log(this.events);
+    this.$store.dispatch('loadEvents');
   },
   computed: {
     events() {
