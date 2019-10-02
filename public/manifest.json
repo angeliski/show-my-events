@@ -1,6 +1,6 @@
 {
-  "name": "show-my-events",
-  "short_name": "show-my-events",
+  "name": "Eventos",
+  "short_name": "Eventos",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
