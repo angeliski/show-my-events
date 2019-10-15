@@ -5,14 +5,17 @@
         <EventsCalendar :events="events"/>
       </b-col>
       <b-col cols="12" sm="12" md="12" lg="6">
-        <div class="alert alert-warning mt-6" v-if="selectedEvents.length == 0">
-          Nenhum evento foi disponível nessa data.
-        </div>
         <transition-group name="card"
             enter-active-class="rotateInDownRight"
-            mode="in-out"
+            leave-active-class="rotateOutDownLeft"
             tag="div">
-          <EventCard :event="event" :key="event.data" v-for="event in selectedEvents"></EventCard>
+        <div class="alert alert-warning mt-6" v-if="selectedEvents.length == 0" :key="empty-val">
+          Nenhum evento foi disponível nessa data.
+        </div>
+          <EventCard
+           :event="event"
+           :key="`${event.data}-${index}`"
+           v-for="(event, index) in selectedEvents" ></EventCard>
         </transition-group>
       </b-col>
     </b-row>
@@ -46,3 +49,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.rotateInDownRight {
+  animation-delay: 1s;
+}
+
+</style> 
